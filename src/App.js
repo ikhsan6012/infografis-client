@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Main from './components/Main'
+import KepatuhanWPBaru from './components/pages/KepatuhanWPBaru'
+import EkstraEffortEkstensifikasi from './components/pages/EkstraEffortEkstensifikasi'
+import PenambahanWPBaru from './components/pages/PenambahanWPBaru'
+import WPBaruBayar from './components/pages/WPBaruBayar'
+import Geotagging from './components/pages/Geotagging'
 
-function App() {
+const App = () => {
+	const data = [
+		{ title: 'Kepatuhan WP Baru', path: '/kepatuhan-wp-baru', component: KepatuhanWPBaru },
+		{ title: 'Ekstra Effort Ekstensifikasi', path: '/ekstra-effort-ekstensifikasi', component: EkstraEffortEkstensifikasi },
+		{ title: 'Penambahan WP Baru', path: '/penambahan-wp-baru', component: PenambahanWPBaru },
+		{ title: 'WP Baru Bayar', path: '/wp-baru-bayar', component: WPBaruBayar },
+		{ title: 'Geotagging', path: '/geotagging', component: Geotagging },
+  ]
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <Navbar data={ data }/>
+      <Main data={ data }/>
+    </Router>
+  )
 }
-
-export default App;
+export default App
