@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router-dom'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
+import Button from 'react-bootstrap/Button'
 
 const NavbarComponent = props =>
 	<Navbar bg="light" expand="lg">
@@ -17,6 +18,10 @@ const NavbarComponent = props =>
 					) }
 				</NavDropdown>
 			</Nav>
+			{ !localStorage.getItem('token') ?
+				<Button as={ Link } to="/login" id="login" variant="outline-primary">Login</Button> :
+				<Button as={ Link } to="/logout" id="logout" variant="outline-danger">Logout</Button>
+			}
 		</Navbar.Collapse>
 	</Navbar>
 export default NavbarComponent

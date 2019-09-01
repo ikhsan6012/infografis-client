@@ -8,7 +8,7 @@ import PenambahanWPBaru from './components/pages/PenambahanWPBaru'
 import WPBaruBayar from './components/pages/WPBaruBayar'
 import Geotagging from './components/pages/Geotagging'
 
-const App = () => {
+const App = () => {  
 	const data = [
 		{ title: 'Kepatuhan WP Baru', path: '/kepatuhan-wp-baru', component: KepatuhanWPBaru },
 		{ title: 'Ekstra Effort Ekstensifikasi', path: '/ekstra-effort-ekstensifikasi', component: EkstraEffortEkstensifikasi },
