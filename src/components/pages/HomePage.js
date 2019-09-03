@@ -5,7 +5,7 @@ import Title from '../Title.js'
 import InfografisCard from '../InfografisCard'
 
 const HomePage = props => {
-	if(!localStorage.getItem('token')) document.getElementById('login').click()
+	if(!localStorage.getItem('token')) window.location.pathname = '/login'
 
 	return (
 		<>

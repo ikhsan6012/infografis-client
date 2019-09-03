@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button'
 import Title from '../Title.js'
 
 const Login = props => {
-	if(localStorage.getItem('test')) return window.location.pathname = '/'
+	if(localStorage.getItem('test')) window.location.pathname = '/'
 	
 	return (
 		<>

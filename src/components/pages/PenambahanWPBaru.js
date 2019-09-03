@@ -2,7 +2,7 @@ import React from 'react'
 import Title from '../Title.js'
 
 const PenambahanWPBaru = props => {
-	if(!localStorage.getItem('test')) return window.location.pathname = '/login'
+	if(!localStorage.getItem('test')) window.location.pathname = '/login'
 	
 	return (
 		<>

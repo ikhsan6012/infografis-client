@@ -2,7 +2,7 @@ import React from 'react'
 import Title from '../Title.js'
 
 const Geotagging = props => {
-	if(!localStorage.getItem('token')) document.getElementById('login').click()
+	if(!localStorage.getItem('token')) window.location.pathname = '/login'
 
 	return (
 		<>
